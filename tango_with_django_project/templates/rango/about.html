@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html>
+
+    <head>
+        <title>About</title>
+    </head>
+
+    <body>
+        <h1>Alex vs Chocolate</h1>
+        <a href="/rango/">Back to Index</a><br /># 
+        <img src="{% static "images/AlexVsChocolate.jpg" %}" alt="Picture of Alex" />
+     	<img src="{{ MEDIA_URL }}rango.jpg"/>
+    </body>
+
+</html>
