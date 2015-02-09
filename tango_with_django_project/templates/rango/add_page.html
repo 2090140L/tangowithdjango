@@ -14,7 +14,7 @@
 			{% for hidden in form.hidden_fields %}
 				{{ hidden }}
 			{% endfor %}
-e.html
+
 			{% for field in form.visible_fields %}
 				{{ field.errors }}
 				{{ field.help_text }}
@@ -24,7 +24,9 @@ e.html
 		{% else %}
 		A category by this name does not exist. 
 		{% endif %}
+
 		<input type = "submit" name="submit" value="Create Page" />
 		</form>
+
 	</body>
 </html>
