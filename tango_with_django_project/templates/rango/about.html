@@ -1,19 +1,11 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 
 {% load staticfiles %}
 
-<html>
-
-    <head>
-        <title>About</title>
-    </head>
-
-    <body>
-        <h1>Alex vs Chocolate</h1>
+{% block body_block %}
+<h1>Alex vs Chocolate</h1>
         <br>This tutorial has been put together by Alex Leet, 2090140L</br>
-        <a href="/rango/">Back to Index</a><br /># 
+         <br>#AlexVsChoc</br>
         <img src="{% static "images/AlexVsChocolate.jpg" %}" alt="Picture of Alex" />
-     	<img src="{{ MEDIA_URL }}rango.jpg"/>
-    </body>
-
-</html>
+        <img src="{{ MEDIA_URL }}rango.jpg"/>
+{% endblock %}
