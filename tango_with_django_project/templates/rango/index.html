@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block body_block %}
+ <p> visits: {{ visits }}</p>
 {% if user.is_authenticated %}
       <h1>Rango says... hello {{ user.username }}!</h1>
     {% else %}
