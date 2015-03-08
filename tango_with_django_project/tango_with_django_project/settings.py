@@ -33,7 +33,7 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['2090140l.pythonanywhere.com']
 
 
 # Application definition
