@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from rango.models import Page
+from rango.models import Page, Category, UserProfile
 from django.http import HttpResponse
-from rango.models import Category
+
 from rango.forms import CategoryForm
 from rango.forms import PageForm
 from rango.forms import UserForm, UserProfileForm
@@ -87,6 +87,21 @@ def category(request, category_name_slug):
         context_dict['query'] = category.name
 
     return render(request, 'rango/category.html', context_dict)
+
+@login_required
+def profile(request):
+    user = User.objects.get(username=request.user.username)
+    context_dict = {}
+    try:
+        userprofile = UserProfile.objects.get(user=user)
+    except:
+        userprofile = None
+
+    context_dict['user'] = user
+    context_dict['userprofile'] = userprofile
+
+    return render(request, 'rango/profile.html', context_dict)
+
 
 @login_required
 def like_category(request):
