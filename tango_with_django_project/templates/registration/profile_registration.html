@@ -1,14 +1,11 @@
 {% extends "base.html" %}
-{% load bootstrap_toolkit %}
+
 {% block body_block %}
-<form id="form" method="post" action="/rango/add_profile/"
-enctype="multipart/form-data">
+<form role="form" method="post" action=".">
 {% csrf_token %}
-<!-- Display each form. The as_p method wraps each element in a paragraph
-(<p>) element. This ensures each element appears on a new line,
-making everything look neater. -->
-{{ form.as_p }}
-<!-- Provide a button to click to submit the form. -->
-<input type="submit" name="submit" value="Edit profile" />
-</form>
-{% endblock %}
+<h2 class = "form-signin-heading">Edit user profile settings</h2>
+
+<div class = "form-group">
+<p class="required"><label for="id_avatar">
+Avatar:</label>
+<
