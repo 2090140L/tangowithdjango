@@ -1,1 +1,1 @@
-To create a new user, need to flush the db, populate and migrate.
+#Tango_with_django tutorial completed by Alex Leet (2090140L)
